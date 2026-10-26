@@ -1,0 +1,10 @@
+{
+  "name": "nai-image",
+  "label": "NAI 生图",
+  "description": "NovelAI 图像合成与测试终端（Endfield Protocol）：支持双通道切换、19,663 条内置法典检索、画风槽位管理、多张参考图（Vibe/精准参考/img2img）、多角色坐标与用量统计。",
+  "icon": "Image",
+  "version": "2.9.0",
+  "tab": { "path": "/nai-image", "position": "after:analytics" },
+  "entry": "dist/index.js",
+  "api": "plugin_api.py"
+}

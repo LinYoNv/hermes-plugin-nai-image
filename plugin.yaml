@@ -1,0 +1,27 @@
+name: nai-image
+label: NovelAI 生图
+version: 2.9.0
+description: >
+  NovelAI 二次元生图插件（移植自 astrbot_plugin_nai_image v2.9.0）：支持 NAI 直连（任务接口 + GET 兜底）
+  与 OpenAI 兼容双通道、内置 19,663 条法典词库（V4.5/V5 分卷）、画风槽位绑定、多角色坐标分区防串色、
+  Vibe/精准参考(Director)/图生图，以及「终末地」风格在线测试与控制终端。
+author: 缪缪的小水泡 (Hermes Port)
+optional_env:
+  - name: NAI_IMAGE_TOKEN
+    description: "NovelAI 直连生图 Token（如 STA1N-...）"
+    prompt: "NovelAI Direct Token"
+    password: true
+  - name: NAI_OPENAI_API_KEY
+    description: "NovelAI OpenAI 兼容通道 API Key"
+    prompt: "NovelAI OpenAI API Key"
+    password: true
+provides_tools:
+  - nai_generate_image
+  - nai_search_grimoire
+  - nai_quota
+provides_hooks:
+  - transform_llm_output
+python_dependencies:
+  - "aiohttp>=3.9"
+  - "Pillow>=10.0"
+  - "pyyaml>=6.0"
